@@ -1,4 +1,3 @@
-import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 version = "0.0.1-SNAPSHOT"
@@ -13,8 +12,6 @@ object Versions {
 
 plugins {
     kotlin("jvm") version "1.6.21"
-    id("org.jlleitschuh.gradle.ktlint") version "11.0.0"
-    id("io.gitlab.arturbosch.detekt") version "1.21.0"
 }
 
 dependencies {
@@ -27,11 +24,6 @@ dependencies {
     implementation(group = "com.fasterxml.jackson.datatype", name = "jackson-datatype-jsr310", version = Versions.JACKSON)
 }
 
-detekt {
-    buildUponDefaultConfig = true
-    config = files("$projectDir/detekt-config.yml")
-    parallel = true
-}
 
 tasks.apply {
     test {
@@ -42,19 +34,6 @@ tasks.apply {
         kotlinOptions {
             jvmTarget = "11"
             freeCompilerArgs = listOf("-Xjsr305=strict", "-Xinline-classes")
-        }
-    }
-
-    withType<Detekt>().configureEach {
-        jvmTarget = "1.8"
-
-        reports {
-            txt.required.set(false)
-            html.required.set(true)
-            with(xml) {
-                required.set(true)
-                outputLocation.set(file("$buildDir/reports/detekt/detekt.xml"))
-            }
         }
     }
 }
