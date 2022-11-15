@@ -8,14 +8,14 @@ import java.io.File
 import java.io.FileInputStream
 import kotlin.test.assertEquals
 
-internal class ImdbParserTest {
+internal class ImdbCsvParserTest {
 
     companion object {
         private const val path = "src/test/resources/ratings.csv"
         private const val actualSize = 2199
         private const val pathToFiveItems = "src/test/resources/ratings_5_items.csv"
 
-        private val parser = ImdbParser()
+        private val parser = ImdbCsvParser()
     }
 
     @Test

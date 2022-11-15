@@ -7,7 +7,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import java.io.File
 import java.io.InputStream
 
-class ImdbParser {
+class ImdbCsvParser {
 
     private val csvMapper = CsvMapper().apply {
         enable(CsvParser.Feature.TRIM_SPACES)
