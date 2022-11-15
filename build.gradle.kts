@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-version = "0.0.1-SNAPSHOT"
+version = "0.0.1"
 group = "com.unrec"
 description = "imdb-csv-parser"
 java.sourceCompatibility = JavaVersion.VERSION_11
@@ -12,6 +12,7 @@ object Versions {
 
 plugins {
     kotlin("jvm") version "1.6.21"
+    id("maven-publish")
 }
 
 dependencies {
@@ -36,6 +37,11 @@ tasks.apply {
             freeCompilerArgs = listOf("-Xjsr305=strict", "-Xinline-classes")
         }
     }
+}
+
+publishing {
+    publications.create<MavenPublication>("artifact").from(components["java"])
+    repositories.mavenLocal()
 }
 
 repositories {
