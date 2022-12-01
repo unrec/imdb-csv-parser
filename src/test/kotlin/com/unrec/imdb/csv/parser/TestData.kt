@@ -7,7 +7,7 @@ object TestData {
     val ratedItems = listOf(
         RatedItem(
             "tt0110912",
-            10F,
+            10,
             LocalDate.parse("2010-01-17"),
             "Pulp Fiction",
             "https://www.imdb.com/title/tt0110912/",
@@ -22,7 +22,7 @@ object TestData {
         ),
         RatedItem(
             "tt0401792",
-            10F,
+            10,
             LocalDate.parse("2019-10-21"),
             "Sin City",
             "https://www.imdb.com/title/tt0401792/",
@@ -37,7 +37,7 @@ object TestData {
         ),
         RatedItem(
             "tt7366338",
-            9F,
+            9,
             LocalDate.parse("2019-06-14"),
             "Chernobyl",
             "https://www.imdb.com/title/tt7366338/",
@@ -52,7 +52,7 @@ object TestData {
         ),
         RatedItem(
             "tt1625351",
-            6F,
+            6,
             LocalDate.parse("2011-03-18"),
             "The 83rd Annual Academy Awards",
             "https://www.imdb.com/title/tt1625351/",
@@ -67,7 +67,7 @@ object TestData {
         ),
         RatedItem(
             "tt0291337",
-            10F,
+            10,
             LocalDate.parse("2010-02-11"),
             "Max Payne",
             "https://www.imdb.com/title/tt0291337/",

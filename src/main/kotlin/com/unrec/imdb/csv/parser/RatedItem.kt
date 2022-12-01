@@ -9,7 +9,7 @@ data class RatedItem(
     val id: String? = null,
 
     @field:JsonProperty("Your Rating")
-    val userRating: Float? = null,
+    val userRating: Byte? = null,
 
     @field:JsonProperty("Date Rated")
     @field:JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
