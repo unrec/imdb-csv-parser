@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat
 import com.fasterxml.jackson.annotation.JsonProperty
 import java.time.LocalDate
 
-data class RatedItem(
+data class ParsedItem(
     @field:JsonProperty("Const")
     val id: String? = null,
 

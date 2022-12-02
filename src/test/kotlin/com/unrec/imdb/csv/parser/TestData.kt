@@ -4,8 +4,8 @@ import java.time.LocalDate
 
 object TestData {
 
-    val ratedItems = listOf(
-        RatedItem(
+    val parsedItems = listOf(
+        ParsedItem(
             "tt0110912",
             10,
             LocalDate.parse("2010-01-17"),
@@ -20,7 +20,7 @@ object TestData {
             LocalDate.parse("1994-05-21"),
             listOf("Quentin Tarantino")
         ),
-        RatedItem(
+        ParsedItem(
             "tt0401792",
             10,
             LocalDate.parse("2019-10-21"),
@@ -35,7 +35,7 @@ object TestData {
             LocalDate.parse("2005-03-28"),
             listOf("Frank Miller", "Quentin Tarantino", "Robert Rodriguez")
         ),
-        RatedItem(
+        ParsedItem(
             "tt7366338",
             9,
             LocalDate.parse("2019-06-14"),
@@ -50,7 +50,7 @@ object TestData {
             LocalDate.parse("2019-05-06"),
             emptyList()
         ),
-        RatedItem(
+        ParsedItem(
             "tt1625351",
             6,
             LocalDate.parse("2011-03-18"),
@@ -65,7 +65,7 @@ object TestData {
             LocalDate.parse("2011-02-27"),
             listOf("Don Mischer", "Troy Miller")
         ),
-        RatedItem(
+        ParsedItem(
             "tt0291337",
             10,
             LocalDate.parse("2010-02-11"),

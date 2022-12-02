@@ -33,17 +33,17 @@ class ImdbCsvParser {
         .addArrayColumn("Directors")
         .build()
 
-    fun parse(inputStream: InputStream): List<RatedItem> {
-        return csvMapper.readerFor(RatedItem::class.java)
+    fun parse(inputStream: InputStream): List<ParsedItem> {
+        return csvMapper.readerFor(ParsedItem::class.java)
             .with(schema)
-            .readValues<RatedItem>(inputStream)
+            .readValues<ParsedItem>(inputStream)
             .readAll()
     }
 
-    fun parse(file: File): List<RatedItem> {
-        return csvMapper.readerFor(RatedItem::class.java)
+    fun parse(file: File): List<ParsedItem> {
+        return csvMapper.readerFor(ParsedItem::class.java)
             .with(schema)
-            .readValues<RatedItem>(file)
+            .readValues<ParsedItem>(file)
             .readAll()
     }
 }
