@@ -33,7 +33,7 @@ internal class ImdbCsvParserTest {
     @Test
     internal fun `Parse 5 exact records from the File`() {
         // given
-        val ratedItems = TestData.ratedItems
+        val ratedItems = TestData.parsedItems
 
         // when
         val items = parser.parse(File(pathToFiveItems))
@@ -42,7 +42,7 @@ internal class ImdbCsvParserTest {
         items.size shouldBe 5
         items.forEach { item ->
             val ratedItem = ratedItems.find { it.id == item.id }!!
-            item.shouldBeEqualToIgnoringFields(ratedItem, RatedItem::genres, RatedItem::directors)
+            item.shouldBeEqualToIgnoringFields(ratedItem, ParsedItem::genres, ParsedItem::directors)
             item.directors shouldContainExactlyInAnyOrder ratedItem.directors
             item.genres shouldContainExactlyInAnyOrder ratedItem.genres
         }
